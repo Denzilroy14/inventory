@@ -1,0 +1,17 @@
+<html>
+<head>
+<title>Delete page</title>
+</head>
+<body>
+<ul>
+{%for data in data%}
+<li>{{data[1]}}{{data[2]}}</li>
+{%endfor%}
+</ul>
+<form method='POST'>
+<label>Enter product name:</label>
+<input type="text" name="product"></br>
+<input type="submit" value="Delete">
+<a href="{{url_for('index')}}"><input type="submit" value="Back to homepage"></a>
+</body>
+</html>

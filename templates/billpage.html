@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Billpage</title>
+</head>
+<body>
+<h1><center>Bill</center></h1>
+<table>
+<tr>
+<th>Product</th>
+<th>rate</th>
+<th>desired Qty</th>
+<th>subtotal</th>
+</tr>
+{%for stock in stocks%}
+<tr>
+<td>{{stock.product}}</td>
+<td>{{stock.rate}}</td>
+<td>{{stock.desired_qty}}</td>
+<td>{{stock.subtotal}}</td>
+</tr>
+{%endfor%}
+<h2>Total:{{total}}</h2>
+<button clas="btn" onclick="window.location.href='{{url_for('index')}}';">Done</button>
+</table>
+</body>
+</html>

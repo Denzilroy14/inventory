@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>View page</title>
+</head>
+<body>
+    <form method="POST" action="{{url_for('bill')}}">
+<table>
+<tr>
+    <th>select</th>
+<th>Product</th>
+<th>Rate</th>
+<th>available Qty</th>
+<th>desired qty</th>
+</tr>
+<tr>
+{%for data in data%}
+<tr>
+<td><input type="checkbox" name="selected_stocks" value="{{data[0]}}"></td>
+<td>{{data[1]}}</td>
+<td>{{data[2]}}</td>
+<td>{{data[3]}}</td>
+<td><input type="number" name="quantity_{{data.id}}" min="1" max="{{data.quantity}}" placeholder="0"></td>
+</tr>
+{%endfor%}
+</table>
+<input type="submit" value="bill">
+</form>
+<a href="{{url_for('index')}}"><input type="submit" value="Back to homepage"></a>
+</body>
+</html>

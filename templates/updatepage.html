@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Update page</title>
+</head>
+<body>
+    <form  action="{{url_for('update_stock')}}" method="POST">
+    <table>
+        <tr>
+        <th>Product</th>
+        <th>rate</th>
+        <th>rem.qty</th>
+        </tr>
+        {%for data in data%}
+        <tr>
+            <td><input type="checkbox" name="selected" value="{{data[0]}}"></td>
+            <td>{{data.prod}}</td>
+            <td>{{data.rate}}</td>
+            <td>{{data.quan}}</td>
+            <td><input type="number" name="quantity{{data.id}}" min="1" max="{{data.quantity}}"></td>
+        </tr>
+        {%endfor%}
+        </table>
+        <!----
+        <label>Enter product:</label>
+        <input type="text" name="product" required></br>
+        <label>Enter rate:</label>
+        <input type="number" name="quantity" required></br>---->
+<input type="submit" value="Update">
+<button class="btn" onclick="window.location.href='{{url_for('index')}}';">back</button>
+</form>
+</body>
+</html>

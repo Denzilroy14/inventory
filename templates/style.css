@@ -1,0 +1,85 @@
+body{
+font-family:Trebuchet MS;
+padding:0;
+margin:0;
+overflow:hidden;
+}
+a{
+text-decoration:none;
+}
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:80%;
+width:100%;
+max-width:95%;
+margin-left:2.5%;
+position:fixed;
+z-index:2;
+}
+.header__menu ul{
+display:flex;
+justify-content:space-between;
+align-items:center;
+list-style:none;
+}
+.header__menu ul li{
+color:#fff;
+letter-spacing:.3em;
+}
+.header__menu ul li{
+margin-right:5vh;
+}
+.header__logo img{
+filter:brightness(0) invert(1);
+height:40px;
+}
+.errorpage{
+background:url("https://t3.ftcdn.net/jpg/01/01/89/46/360_F_101894688_RVSZUtDfPR6Cr5eBDQI7Qo5pZ01jmyK3.jpg");
+background-size:conver;
+background-position:button;
+}
+img.errorpage__tembleweed{
+animation:templweed 5s infinte 1s;
+}
+.errorpage__templeweed-container{
+position:absolute;
+bottom:20px;
+width:100vw;
+transform:translateX(-100%);
+}
+.errorpage__text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+margin-top:-5%;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+.errorpage__button{
+display:block;
+cursor:poinetr;
+border:1px solid #fff;
+color:#e3594e;
+padding:10px 30px;
+letter-spacing:0.2en;
+box-shadow:7px 7px 20px #00000026;
+background:sfff;
+transistion:transform 300ms ease;
+}
+.errorpage__button:active{
+transform:translateY(2px);
+box-shadow:3px 3px 20px #00000026;
+}
+.errorpage__text h3{
+font-size:20vw;
+line-height:1;
+margin:0;
+letter-spacing:0.2em;
+margin-bottom:50px;
+color:#fff;
+text-shadow:7px 7px 20px #00000026;
+}
