@@ -72,7 +72,7 @@ def bill():
     total=0
     detailed_stock=[]
     for stock in selected_stocks:
-        desired_qty_str=request.form.get(f"quantity_{stock['id']}",'0')
+        desired_qty_str=request.form.get(f'quantity_{stock["id"]}','0')
         try:
             desired_qty=int(desired_qty_str)
             if desired_qty<0:
